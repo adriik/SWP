@@ -1,0 +1,27 @@
+﻿<grammar version="1.0" xml:lang="pl-PL" root="rootRule"
+ xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rootRule">
+    <ruleref uri="#firstNumber" />
+    <tag> out.first=rules.latest(); </tag>
+  </rule>
+
+  <rule id="firstNumber">
+    <one-of>
+      <item>
+        Wołoska <tag> out="Wołoska";</tag>
+      </item>
+      <item>
+        Grochowska <tag> out="Grochowska"; </tag>
+      </item>
+      <item>
+        Puławska <tag> out="Puławska"; </tag>
+      </item>
+      <item>
+        Żołnierska <tag> out="Żołnierska"; </tag>
+      </item>
+      <item>
+        stop <tag> out="STOP"; </tag>
+      </item>
+    </one-of>
+  </rule>
+</grammar>

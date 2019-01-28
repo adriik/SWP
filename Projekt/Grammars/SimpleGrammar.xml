@@ -1,0 +1,24 @@
+﻿<grammar version="1.0" xml:lang="pl-PL" root="rootRule"
+ xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rootRule">
+    <ruleref uri="#firstNumber" />
+    <tag> out.first=rules.latest(); </tag>
+  </rule>
+  
+  <rule id="firstNumber">
+    <one-of>
+      <item> sprawdzić <tag> out="sprawdzić";</tag> </item>
+      <item> sprawdzenie <tag> out="sprawdzić"; </tag> </item>
+      <item> sprawdzam <tag> out="sprawdzić"; </tag> </item>
+      <item> odwołać <tag> out="odwołać";</tag> </item>
+      <item> odwołuję <tag> out="odwołać"; </tag> </item>
+      <item> odwołanie <tag> out="odwołać"; </tag> </item>
+      <item> umówić <tag> out="umówić";</tag> </item>
+      <item> umawiam <tag> out="umówić"; </tag> </item>
+      <item> umówienie <tag> out="umówić"; </tag> </item>
+      <item> koniec <tag> out="koniec"; </tag> </item>
+      <item> wyłącz <tag> out="koniec"; </tag> </item>  
+      <item> zamknij <tag> out="koniec"; </tag> </item>        
+    </one-of>
+  </rule>
+</grammar>

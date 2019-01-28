@@ -1,0 +1,30 @@
+﻿<grammar version="1.0" xml:lang="pl-PL" root="rootRule"
+ xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rootRule">
+    <ruleref uri="#firstNumber" />
+    <tag> out.first=rules.latest(); </tag>
+  </rule>
+
+  <rule id="firstNumber">
+    <one-of>
+      <item>
+        Internista <tag> out="Internista";</tag>
+      </item>
+      <item>
+        Okulista <tag> out="Okulista"; </tag>
+      </item>
+      <item>
+        Stomatolog <tag> out="Stomatolog"; </tag>
+      </item>
+      <item>
+        Dermatolog <tag> out="Dermatolog"; </tag>
+      </item>
+      <item>
+        Ortopeda <tag> out="Ortopeda"; </tag>
+      </item>
+      <item>
+        stop <tag> out="STOP"; </tag>
+      </item>
+    </one-of>
+  </rule>
+</grammar>
